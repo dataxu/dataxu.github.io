@@ -3,6 +3,7 @@
   <head>
     <title>DataXu Open Source</title>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <style>
       body {
@@ -20,6 +21,21 @@
         width: 300px;
       }
     </style>
+    <script>
+      $(document).ready(function() {
+        var imageUrls = [
+          'images/dataxu-chess-hero.jpg',
+          'images/dataxu-cloud-hero.jpg',
+          'images/dataxu-conductor-hero.jpg',
+          'images/dataxu-mind-hero.jpg',
+          'images/dataxu-rocket-hero.jpg'
+        ];
+
+        var image_index = Math.floor(Math.random() * imageUrls.length);
+
+        $('.jumbotron').css('background', "url('" + imageUrls[image_index] + "')");
+      })
+    </script>
   </head>
   <body>
     <div class="container">
@@ -36,7 +52,7 @@
       <div class="jumbotron">
         <div class="jumbotron-label">
           <h2>DataXu Open Source</h2>
-          <h4>A collection of open source projects released by DataXu to give back to open source!</h4>
+          <h4>A collection of projects released by DataXu to give back to the open source community!</h4>
         </div>
       </div>
       <div class="row">
@@ -44,6 +60,34 @@
           <h4><a href="https://github.com/dataxu/bin_diesel">BinDiesel</a></h4>
           <p>
           A DSL wrapped around the OptionParser ruby standard library.  Read more about it <a href="https://github.com/dataxu/bin_diesel/blob/master/README.md">here...</a>
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <h4><a href="https://github.com/dataxu/hipchat-plugin">hipchat-plugin</a></h4>
+          <p>
+          Our fork of <a href="https://github.com/jenkins/hipchat-plugin">jenkins/hipchat-plugin</a>.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h4><a href="https://github.com/dataxu/ansible">ansible</a></h4>
+          <p>
+          Our fork of <a href="https://github.com/ansible/ansible">ansible/ansible</a>.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <h4><a href="https://github.com/dataxu/white-elephant">white-elephant</a></h4>
+          <p>
+          Our fork of <a href="https://github.com/linkedin/white-elephant">linkedin/white-elephant</a>.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h4><a href="https://github.com/dataxu/leeroy">leeroy</a></h4>
+          <p>
+          Our fork of <a href="https://github.com/litl/leeroy">litl/leeroy</a>
           </p>
         </div>
       </div>
