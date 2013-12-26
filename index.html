@@ -2,8 +2,51 @@
 <html>
   <head>
     <title>DataXu Open Source</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.js"></script>
+    <style>
+      body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      div.jumbotron {
+        background: url("images/dataxu-mind-hero.jpg");
+        height: 348px;
+        border: 1px solid #e7e7e7;
+      }
+
+      div.jumbotron-label {
+        width: 300px;
+      }
+    </style>
   </head>
   <body>
-    <h2>Coming Soon...</h2>
+    <div class="container">
+      <div class="navbar navbar-default">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">DataXu Open Source</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <div class="jumbotron-label">
+          <h2>DataXu Open Source</h2>
+          <h4>A collection of open source projects released by DataXu to give back to open source!</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h4><a href="https://github.com/dataxu/bin_diesel">BinDiesel</a></h4>
+          <p>
+          A DSL wrapped around the OptionParser ruby standard library.  Read more about it <a href="https://github.com/dataxu/bin_diesel/blob/master/README.md">here...</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
