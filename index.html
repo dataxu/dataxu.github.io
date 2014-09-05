@@ -5,7 +5,11 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-mfizz.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/handlebars.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/gh3.js"></script>
+    <script src="js/repositories.js"></script>
     <style>
       body {
         padding-top: 20px;
@@ -44,6 +48,19 @@
     </script>
   </head>
   <body>
+    <script type="text/x-handlebars-template" id="repository-template">
+      <div class="col-lg-6">
+        <div class="media">
+          <span class="pull-left">
+            <i class="icon-{{language}}" style="font-size: 5em;"></i>
+          </span>
+          <div class="media-body">
+            <a href="https://github.com/{{full_name}}"><h4 class="media-heading">{{full_name}}</h4></a>
+            {{description}}
+          </div>
+        </div>
+      </div>
+    </script>
     <div class="container">
       <div class="navbar navbar-default">
         <div class="navbar-header">
@@ -61,78 +78,9 @@
           <h4>A collection of projects released (or forked) by DataXu to give back to the open source community!</h4>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="media">
-            <span class="pull-left">
-              <i class="icon-ruby" style="font-size: 5em;"></i>
-            </span>
-            <div class="media-body">
-              <a href="https://github.com/dataxu/bin_diesel"><h4 class="media-heading">BinDiesel</h4></a>
-              A DSL wrapped around the OptionParser ruby standard library.  Read more about it <a href="https://github.com/dataxu/bin_diesel/blob/master/README.md">here</a>, or visit <a href="https://rubygems.org/gems/bin_diesel">RubyGems</a> to install.
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="media">
-            <span class="pull-left">
-              <i class="icon-python" style="font-size: 5em;"></i>
-            </span>
-            <div class="media-body">
-              <a href="https://github.com/dataxu/dxskytap"><h4 class="media-heading">DxSkytap</h4></a>
-              A Python module that contains utilities for accessing SkyTap's available API functions.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="media">
-            <span class="pull-left">
-              <i class="icon-python" style="font-size: 5em;"></i>
-            </span>
-            <div class="media-body">
-              <a href="https://github.com/dataxu/ansible"><h4 class="media-heading">Ansible</h4></a>
-              Our fork of <a href="https://github.com/ansible/ansible">ansible/ansible</a>.
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="media">
-            <span class="pull-left">
-              <i class="icon-hadoop" style="font-size: 5em;"></i>
-            </span>
-            <div class="media-body">
-              <a href="https://github.com/dataxu/white-elephant"><h4 class="media-heading">White-Elephant</h4></a>
-              Our fork of <a href="https://github.com/linkedin/white-elephant">linkedin/white-elephant</a>.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="media">
-            <span class="pull-left">
-              <i class="icon-java" style="font-size: 5em;"></i>
-            </span>
-            <div class="media-body">
-              <a href="https://github.com/dataxu/hipchat-plugin"><h4 class="media-heading">HipChat-Plugin</h4></a>
-              Our fork of <a href="https://github.com/jenkins/hipchat-plugin">jenkins/hipchat-plugin</a>.
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="media">
-            <span class="pull-left">
-              <i class="icon-python" style="font-size: 5em;"></i>
-            </span>
-            <div class="media-body">
-              <a href="https://github.com/dataxu/leeroy"><h4 class="media-heading">Leeroy</h4></a>
-              Our fork of <a href="https://github.com/litl/leeroy">litl/leeroy</a>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <div class="repositories"></div>
+
       <div class="footer">
         <p>Maintained by <a href="mailto:awhite@dataxu.com">awhite@dataxu.com</a></p>
       </div>
